@@ -27,9 +27,9 @@ jobs:
       - name: Deploy to production
         uses: awb-pw/deploy-to-github-pages-action@1.1.1
         env:
-          AUTHOR: woophi
+          AUTHOR: avocadoteam
           BUILD_PATH: dist
-          GITHUB_PAGE_NAME: avocadoteam.github.io/app-sub-modal/
+          GITHUB_PAGE_NAME: app-sub-modal
           PA_TOKEN: ${{ secrets.PA_TOKEN }}
           USERNAME: woophi
           EMAIL: attendentofsky@gmail.com
