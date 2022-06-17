@@ -1,4 +1,6 @@
 import { Avatar, HorizontalCell } from '@vkontakte/vkui';
+import { useContext } from 'react';
+import { SelectedAppContext } from './context';
 import { appImg } from './styles.css';
 import { AppName } from './types';
 
@@ -8,8 +10,9 @@ type Props = {
 };
 
 export const AppLogo = ({ appName, svgPath }: Props) => {
+  const { onSelect } = useContext(SelectedAppContext);
   return (
-    <HorizontalCell size="m" className={appImg}>
+    <HorizontalCell size="m" className={appImg} onClick={() => onSelect(appName)}>
       <Avatar size={80} mode="app" src={svgPath} alt={appName} />
     </HorizontalCell>
   );

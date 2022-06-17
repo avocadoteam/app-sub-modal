@@ -1,4 +1,5 @@
 import { Button, FixedLayout, HorizontalScroll, SizeType, Spacing, Text } from '@vkontakte/vkui';
+import { useState } from 'react';
 import { SparklesIcon } from '../icons/Sparkles';
 import { AppLogo } from './AppLogo';
 import city from './apps-svg/city.svg';
@@ -9,13 +10,23 @@ import hinter from './apps-svg/hinter.svg';
 import medic from './apps-svg/medic.svg';
 import stuff from './apps-svg/stuff.svg';
 import { previewContent } from './constants';
+import { SelectedAppContext } from './context';
 import { DescItem } from './DescItem';
 import { betweenFixed, bFixed, bTitle, button, hContainer, mSubTitle, mTitle } from './styles.css';
 import { AppName } from './types';
 
+export const openLink = (link: string) => {
+  const a = document.createElement('a');
+  a.href = link;
+  a.target = '_blank';
+  a.click();
+};
+
 export const HorizontalApps = () => {
+  const [appName, setAppName] = useState(AppName.Friends);
+
   return (
-    <>
+    <SelectedAppContext.Provider value={{ appName, onSelect: setAppName }}>
       <FixedLayout vertical="top">
         <HorizontalScroll showArrows>
           <div className={hContainer}>
@@ -38,13 +49,20 @@ export const HorizontalApps = () => {
         </Text>
         <Spacing size={24} />
 
-        {previewContent.friends?.map(f => (
+        {previewContent[appName]?.map(f => (
           <DescItem {...f} key={f.title} />
         ))}
       </div>
       <FixedLayout filled vertical="bottom">
         <div className={bFixed}>
-          <Button size="l" sizeY={SizeType.REGULAR} stretched before={<SparklesIcon />} className={button}>
+          <Button
+            size="l"
+            sizeY={SizeType.REGULAR}
+            stretched
+            before={<SparklesIcon />}
+            className={button}
+            onClick={() => openLink('https://vk.com/futureminds?source=description&w=donut_payment-133379540')}
+          >
             Попробовать
           </Button>
           <Text weight="3" className={bTitle}>
@@ -52,6 +70,6 @@ export const HorizontalApps = () => {
           </Text>
         </div>
       </FixedLayout>
-    </>
+    </SelectedAppContext.Provider>
   );
 };
