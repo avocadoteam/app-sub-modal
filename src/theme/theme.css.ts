@@ -1,7 +1,11 @@
 import { createTheme, globalStyle } from '@vanilla-extract/css';
 
 export const [themeClass, vars] = createTheme({
-  color: {},
+  color: {
+    sub: '#888888',
+    btn: '#4DA9FF',
+    textWhite: '#F9F9F9',
+  },
 });
 
 globalStyle(`*`, {
@@ -19,4 +23,16 @@ globalStyle(`html, body`, {
   WebkitFontSmoothing: 'antialiased',
   MozOsxFontSmoothing: 'grayscale',
   fontSize: '16px',
+});
+globalStyle(`body[scheme='space_gray']`, {
+  // @ts-ignore
+  '--background_content': '#242424',
+  '--header_alternate_background': '#242424',
+  '--background_page': '#242424',
+});
+globalStyle(`body`, {
+  // @ts-ignore
+  '--background_content': '#F9F9F9',
+  '--header_alternate_background': '#F9F9F9',
+  '--background_page': '#F9F9F9',
 });
