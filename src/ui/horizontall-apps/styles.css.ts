@@ -44,6 +44,7 @@ export const bTitle = style([
 export const betweenFixed = style({
   paddingTop: '178px',
   paddingBottom: '108px',
+  backgroundColor: 'var(--background_content)',
 });
 
 export const dTitle = style({
