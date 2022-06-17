@@ -26,13 +26,13 @@ globalStyle(`html, body`, {
 });
 globalStyle(`body[scheme='space_gray']`, {
   // @ts-ignore
-  '--background_content': '#242424',
-  '--header_alternate_background': '#242424',
-  '--background_page': '#242424',
+  '--background_content': '#242424 !important',
+  '--header_alternate_background': '#242424 !important',
+  '--background_page': '#242424 !important',
 });
 globalStyle(`body`, {
   // @ts-ignore
-  '--background_content': '#F9F9F9',
-  '--header_alternate_background': '#F9F9F9',
-  '--background_page': '#F9F9F9',
+  '--background_content': '#F9F9F9 !important',
+  '--header_alternate_background': '#F9F9F9 !important',
+  '--background_page': '#F9F9F9 !important',
 });
