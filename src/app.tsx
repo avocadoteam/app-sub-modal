@@ -1,20 +1,5 @@
-import { Logo } from './logo'
+import { themeClass } from './theme/theme.css';
 
 export function App() {
-  return (
-    <>
-      <Logo />
-      <p>Hello Vite + Preact!</p>
-      <p>
-        <a
-          class="link"
-          href="https://preactjs.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Preact
-        </a>
-      </p>
-    </>
-  )
+  return <div className={themeClass}>HI</div>;
 }
