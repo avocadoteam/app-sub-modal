@@ -19,6 +19,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install -g pnpm
-      - run: pnpm install
-      - run: pnpm build
+      - name: install and build
+        run: |
+          npm install -g pnpm
+          pnpm install
+          pnpm build
+      - name: Deploy to production
+        uses: awb-pw/deploy-to-github-pages-action@1.1.1
+        env:
+          AUTHOR: woophi
+          BUILD_PATH: dist
+          GITHUB_PAGE_NAME: avocadoteam.github.io/app-sub-modal/
+          PA_TOKEN: ${{ secrets.PA_TOKEN }}
+          USERNAME: woophi
+          EMAIL: attendentofsky@gmail.com
