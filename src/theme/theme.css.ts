@@ -12,10 +12,11 @@ globalStyle(`html, body`, {
   width: '100%',
   padding: 0,
   margin: 0,
-  background: '#fafafa',
+  background: '#F9F9F9',
   fontFamily: `'Helvetica Neue', arial, sans-serif`,
   fontWeight: 400,
-  color: '#444',
+  color: '#2C2C2C',
   WebkitFontSmoothing: 'antialiased',
   MozOsxFontSmoothing: 'grayscale',
+  fontSize: '16px',
 });
