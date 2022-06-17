@@ -27,7 +27,7 @@ export const HorizontalApps = () => {
 
   return (
     <SelectedAppContext.Provider value={{ appName, onSelect: setAppName }}>
-      <FixedLayout vertical="top">
+      <FixedLayout filled vertical="top">
         <HorizontalScroll showArrows>
           <div className={hContainer}>
             <AppLogo appName={AppName.City} svgPath={city} />
