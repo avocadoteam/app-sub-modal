@@ -11,3 +11,18 @@ npm install -g pnpm
 6. создаем pull request
 7. ???
 8. profit
+
+# Как добавить в приложение
+
+```js
+<iframe
+  src={`https://avocadoteam.github.io/app-sub-modal/?appearance=${appearance}`}
+  style={{ height: 'calc(100vh - 120px)', border: 0 }}
+  width="100%"
+/>
+```
+
+## Параметры прилы
+
+1. `appearance` - `dark | light` - default -> `light`
+2. `app` - `AppName` - default -> `friends`
