@@ -1,6 +1,7 @@
 import { Button, FixedLayout, HorizontalScroll, SizeType, Spacing, Text } from '@vkontakte/vkui';
 import { useState } from 'react';
 import { SparklesIcon } from '../icons/Sparkles';
+import { useQParams } from '../useQParams';
 import { AppLogo } from './AppLogo';
 import city from './apps-svg/city.svg';
 import deliver from './apps-svg/deliver.svg';
@@ -23,7 +24,8 @@ export const openLink = (link: string) => {
 };
 
 export const HorizontalApps = () => {
-  const [appName, setAppName] = useState(AppName.Friends);
+  const { app } = useQParams();
+  const [appName, setAppName] = useState(app);
 
   return (
     <SelectedAppContext.Provider value={{ appName, onSelect: setAppName }}>
