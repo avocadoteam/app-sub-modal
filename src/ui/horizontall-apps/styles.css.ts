@@ -6,9 +6,19 @@ export const hContainer = style({
   display: 'flex',
 });
 
-export const appImg = style({});
+export const appImg = style({
+  marginLeft: '.5rem',
+  transition: 'all .2s ease-out',
+  cursor: 'pointer',
+  borderRadius: '1.75rem',
 
-globalStyle(`${appImg} > div > div > div.vkuiAvatar`, {
+  ':active': {
+    transform: 'translateY(3px)',
+    boxShadow: '0 4px 4px -3px rgba(127, 140, 153, 0.6)',
+  },
+});
+
+globalStyle(`${appImg}  > div.vkuiAvatar`, {
   borderRadius: '1.75rem !important',
 });
 

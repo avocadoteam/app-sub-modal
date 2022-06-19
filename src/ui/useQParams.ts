@@ -17,6 +17,5 @@ const getQueryVariable = <T>(variable: string, ifEmpty: T) => {
       return decodeURIComponent(pair[1]) as unknown as T;
     }
   }
-  console.log('Query variable %s not found', variable);
   return ifEmpty;
 };

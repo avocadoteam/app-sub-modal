@@ -1,4 +1,4 @@
-import { Button, FixedLayout, HorizontalScroll, SizeType, Spacing, Text } from '@vkontakte/vkui';
+import { Button, FixedLayout, SizeType, Spacing, Text } from '@vkontakte/vkui';
 import { useState } from 'react';
 import { SparklesIcon } from '../icons/Sparkles';
 import { useQParams } from '../useQParams';
@@ -30,7 +30,8 @@ export const HorizontalApps = () => {
   return (
     <SelectedAppContext.Provider value={{ appName, onSelect: setAppName }}>
       <FixedLayout filled vertical="top">
-        <HorizontalScroll showArrows>
+        {/* @ts-ignore */}
+        <marquee stop>
           <div className={hContainer}>
             <AppLogo appName={AppName.City} svgPath={city} />
             <AppLogo appName={AppName.Dictionary} svgPath={dict} />
@@ -40,8 +41,10 @@ export const HorizontalApps = () => {
             <AppLogo appName={AppName.Medic} svgPath={medic} />
             <AppLogo appName={AppName.Stuff} svgPath={stuff} />
           </div>
-        </HorizontalScroll>
+          {/* @ts-ignore */}
+        </marquee>
       </FixedLayout>
+
       <div className={betweenFixed}>
         <Text weight="1" className={mTitle}>
           Попробуйте avocado+

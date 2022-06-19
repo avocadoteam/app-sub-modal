@@ -1,4 +1,14 @@
-import { Icon24CrownOutline, Icon24LikeOutline, Icon24MoreHorizontal, Icon24ViewOutline } from '@vkontakte/icons';
+import {
+  Icon24AdvertisingOutline,
+  Icon24BookmarkOutline,
+  Icon24CrownOutline,
+  Icon24LikeOutline,
+  Icon24List,
+  Icon24LogoGoogle,
+  Icon24MoreHorizontal,
+  Icon24Users3Outline,
+  Icon24ViewOutline,
+} from '@vkontakte/icons';
 import { AppContent, AppName } from './types';
 
 export const previewContent: Partial<Record<AppName, AppContent[]>> = {
@@ -17,6 +27,38 @@ export const previewContent: Partial<Record<AppName, AppContent[]>> = {
       Icon: Icon24ViewOutline,
       title: 'Рассекречивайте друзей',
       subTitle: 'Анонимность не выстоит перед подпиской — вы сможете увидеть, кто скрывается за маской',
+    },
+    {
+      Icon: Icon24MoreHorizontal,
+      title: 'Бонусы в других приложениях',
+    },
+  ],
+  stuff: [
+    {
+      Icon: Icon24LogoGoogle,
+      title: 'Синхронизация с Google Tasks',
+    },
+    {
+      Icon: Icon24List,
+      title: 'Неограниченные списки',
+    },
+    {
+      Icon: Icon24Users3Outline,
+      title: 'Неограниченные пользователи',
+    },
+    {
+      Icon: Icon24AdvertisingOutline,
+      title: 'Никакой рекламы',
+    },
+  ],
+  dict: [
+    {
+      Icon: Icon24BookmarkOutline,
+      title: 'Неограниченные закладки',
+    },
+    {
+      Icon: Icon24AdvertisingOutline,
+      title: 'Никакой рекламы',
     },
     {
       Icon: Icon24MoreHorizontal,
