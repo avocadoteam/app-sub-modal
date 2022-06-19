@@ -31,7 +31,7 @@ export const HorizontalApps = () => {
     <SelectedAppContext.Provider value={{ appName, onSelect: setAppName }}>
       <FixedLayout filled vertical="top">
         {/* @ts-ignore */}
-        <marquee stop>
+        <marquee>
           <div className={hContainer}>
             <AppLogo appName={AppName.City} svgPath={city} />
             <AppLogo appName={AppName.Dictionary} svgPath={dict} />
