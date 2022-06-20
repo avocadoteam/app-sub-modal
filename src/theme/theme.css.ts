@@ -16,7 +16,6 @@ globalStyle(`html, body`, {
   width: '100%',
   padding: 0,
   margin: 0,
-  background: '#F9F9F9',
   fontFamily: `'Helvetica Neue', arial, sans-serif`,
   fontWeight: 400,
   color: '#2C2C2C',
