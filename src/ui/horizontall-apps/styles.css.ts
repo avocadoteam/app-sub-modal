@@ -4,6 +4,7 @@ import { vars } from '../../theme/theme.css';
 export const hContainer = style({
   margin: '3rem 0 2rem',
   display: 'flex',
+  overflow: 'hidden',
 });
 
 export const appImg = style({

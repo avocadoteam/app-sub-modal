@@ -1,5 +1,6 @@
 import { Button, FixedLayout, SizeType, Spacing, Text } from '@vkontakte/vkui';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
+import Marquee from 'react-fast-marquee';
 import { SparklesIcon } from '../icons/Sparkles';
 import { useQParams } from '../useQParams';
 import { AppLogo } from './AppLogo';
@@ -27,22 +28,28 @@ export const HorizontalApps = () => {
   const { app } = useQParams();
   const [appName, setAppName] = useState(app);
 
+  const apps = useMemo(
+    () => (
+      <>
+        <AppLogo appName={AppName.City} svgPath={city} />
+        <AppLogo appName={AppName.Dictionary} svgPath={dict} />
+        <AppLogo appName={AppName.Friends} svgPath={friends} />
+        <AppLogo appName={AppName.GdePosylka} svgPath={deliver} />
+        <AppLogo appName={AppName.Hinter} svgPath={hinter} />
+        <AppLogo appName={AppName.Medic} svgPath={medic} />
+        <AppLogo appName={AppName.Stuff} svgPath={stuff} />
+      </>
+    ),
+    [],
+  );
+
   return (
     <SelectedAppContext.Provider value={{ appName, onSelect: setAppName }}>
       <FixedLayout filled vertical="top">
-        {/* @ts-ignore */}
-        <marquee>
-          <div className={hContainer}>
-            <AppLogo appName={AppName.City} svgPath={city} />
-            <AppLogo appName={AppName.Dictionary} svgPath={dict} />
-            <AppLogo appName={AppName.Friends} svgPath={friends} />
-            <AppLogo appName={AppName.GdePosylka} svgPath={deliver} />
-            <AppLogo appName={AppName.Hinter} svgPath={hinter} />
-            <AppLogo appName={AppName.Medic} svgPath={medic} />
-            <AppLogo appName={AppName.Stuff} svgPath={stuff} />
-          </div>
-          {/* @ts-ignore */}
-        </marquee>
+        <Marquee className={hContainer} speed={35} gradient={false}>
+          {apps}
+          {apps}
+        </Marquee>
       </FixedLayout>
 
       <div className={betweenFixed}>
