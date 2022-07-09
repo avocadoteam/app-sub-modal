@@ -1,5 +1,4 @@
 import {
-  Icon24AdvertisingOutline,
   Icon24BookmarkOutline,
   Icon24CrownOutline,
   Icon24LikeOutline,
@@ -46,19 +45,11 @@ export const previewContent: Partial<Record<AppName, AppContent[]>> = {
       Icon: Icon24Users3Outline,
       title: 'Неограниченные пользователи',
     },
-    {
-      Icon: Icon24AdvertisingOutline,
-      title: 'Никакой рекламы',
-    },
   ],
   dict: [
     {
       Icon: Icon24BookmarkOutline,
       title: 'Неограниченные закладки',
-    },
-    {
-      Icon: Icon24AdvertisingOutline,
-      title: 'Никакой рекламы',
     },
     {
       Icon: Icon24MoreHorizontal,

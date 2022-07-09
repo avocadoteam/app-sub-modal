@@ -5,6 +5,7 @@ export const hContainer = style({
   margin: '3rem 0 2rem',
   display: 'flex',
   overflow: 'hidden',
+  paddingBottom: '.5rem',
 });
 
 export const appImg = style({
