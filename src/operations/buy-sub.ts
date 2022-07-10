@@ -1,13 +1,17 @@
-import bridge from '@vkontakte/vk-bridge';
-
-export const buySub = (app_id: number) =>
-  bridge.send('VKWebAppOpenPayForm', {
-    app_id,
-    action: 'pay-to-group',
-    params: {
-      amount: 79,
-      description: 'Avocado+ -> Одна подписка для 10+ приложений',
-      data: 'subscription',
-      group_id: 197416979,
-    },
-  });
+export const buySub = () =>
+  window.parent.postMessage(
+    JSON.stringify({
+      message: 'avo-open-payment',
+      payload: {
+        app_id: 7511650,
+        action: 'pay-to-group',
+        params: {
+          amount: 79,
+          description: 'Avocado+ -> Одна подписка для 10+ приложений',
+          data: 'subscription',
+          group_id: 197416979,
+        },
+      },
+    }),
+    '*',
+  );
