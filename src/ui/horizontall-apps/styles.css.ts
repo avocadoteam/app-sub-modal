@@ -57,6 +57,7 @@ export const betweenFixed = style({
   paddingTop: '178px',
   paddingBottom: '108px',
   backgroundColor: 'var(--background_content)',
+  minHeight: '100%',
 });
 
 export const dTitle = style({

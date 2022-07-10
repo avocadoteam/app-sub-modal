@@ -1,6 +1,7 @@
 import { Button, FixedLayout, SizeType, Spacing, Text } from '@vkontakte/vkui';
 import { useMemo, useState } from 'react';
 import Marquee from 'react-fast-marquee';
+import { buySub } from '../../operations/buy-sub';
 import { SparklesIcon } from '../icons/Sparkles';
 import { useQParams } from '../useQParams';
 import { AppLogo } from './AppLogo';
@@ -67,14 +68,7 @@ export const HorizontalApps = () => {
       </div>
       <FixedLayout filled vertical="bottom">
         <div className={bFixed}>
-          <Button
-            size="l"
-            sizeY={SizeType.REGULAR}
-            stretched
-            before={<SparklesIcon />}
-            className={button}
-            onClick={() => openLink('https://vk.com/futureminds?source=description&w=donut_payment-133379540')}
-          >
+          <Button size="l" sizeY={SizeType.REGULAR} stretched before={<SparklesIcon />} className={button} onClick={buySub}>
             Попробовать
           </Button>
           <Text weight="3" className={bTitle}>
