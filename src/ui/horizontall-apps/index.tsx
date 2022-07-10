@@ -26,7 +26,7 @@ export const openLink = (link: string) => {
 };
 
 export const HorizontalApps = () => {
-  const { app } = useQParams();
+  const { app, parentAppId } = useQParams();
   const [appName, setAppName] = useState(app);
 
   const apps = useMemo(
@@ -68,7 +68,14 @@ export const HorizontalApps = () => {
       </div>
       <FixedLayout filled vertical="bottom">
         <div className={bFixed}>
-          <Button size="l" sizeY={SizeType.REGULAR} stretched before={<SparklesIcon />} className={button} onClick={buySub}>
+          <Button
+            size="l"
+            sizeY={SizeType.REGULAR}
+            stretched
+            before={<SparklesIcon />}
+            className={button}
+            onClick={() => buySub(parentAppId)}
+          >
             Попробовать
           </Button>
           <Text weight="3" className={bTitle}>

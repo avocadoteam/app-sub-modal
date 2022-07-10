@@ -5,6 +5,7 @@ export const useQParams = () => {
   return {
     appearance: getQueryVariable<AppearanceType>('appearance', 'light'),
     app: getQueryVariable<AppName>('app', AppName.Friends),
+    parentAppId: getQueryVariable<number>('parentAppId', 7511650),
   };
 };
 

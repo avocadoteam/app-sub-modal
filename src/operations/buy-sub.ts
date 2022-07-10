@@ -1,8 +1,8 @@
 import bridge from '@vkontakte/vk-bridge';
 
-export const buySub = () =>
+export const buySub = (app_id: number) =>
   bridge.send('VKWebAppOpenPayForm', {
-    app_id: 7511650,
+    app_id,
     action: 'pay-to-group',
     params: {
       amount: 79,
