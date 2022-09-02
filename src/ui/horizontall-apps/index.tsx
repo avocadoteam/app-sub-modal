@@ -11,6 +11,7 @@ import friends from './apps-svg/friends.svg';
 import hinter from './apps-svg/hinter.svg';
 import medic from './apps-svg/medic.svg';
 import stuff from './apps-svg/stuff.svg';
+import draw from './apps-svg/draw.svg';
 import { previewContent } from './constants';
 import { SelectedAppContext } from './context';
 import { DescItem } from './DescItem';
@@ -38,6 +39,7 @@ export const HorizontalApps = () => {
         <AppLogo appName={AppName.Hinter} svgPath={hinter} />
         <AppLogo appName={AppName.Medic} svgPath={medic} />
         <AppLogo appName={AppName.Stuff} svgPath={stuff} />
+        <AppLogo appName={AppName.Draw} svgPath={draw} />
       </>
     ),
     [],
