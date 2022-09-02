@@ -8,6 +8,7 @@ export enum AppName {
   Hinter = 'hinter',
   Medic = 'medic',
   Stuff = 'stuff',
+  Draw = 'draw',
 }
 
 export type AppContent = {
