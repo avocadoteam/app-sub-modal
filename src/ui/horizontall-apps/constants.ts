@@ -7,7 +7,7 @@ import {
   Icon24MoreHorizontal,
   Icon24Users3Outline,
   Icon24ViewOutline,
-  Icon24BrushOutline,
+  Icon24PaletteOutline,
   Icon24PenOutline,
 } from '@vkontakte/icons';
 import { AppContent, AppName } from './types';
@@ -60,7 +60,7 @@ export const previewContent: Partial<Record<AppName, AppContent[]>> = {
   ],
   draw: [
     {
-      Icon: Icon24BrushOutline,
+      Icon: Icon24PaletteOutline,
       title: 'Радужный цвет',
       subTitle: 'Рисуйте радужным цветом и другими градиентами',
     },
@@ -72,7 +72,7 @@ export const previewContent: Partial<Record<AppName, AppContent[]>> = {
     {
       Icon: Icon24Users3Outline,
       title: 'Своё лобби',
-      subTitle: 'Создавайте своё лобби, настраивайте слово и рисункки. Приглашайте своих друзей. Вместо 5 человек в лобби, вы можете пригласить до 20 игроков!',
+      subTitle: 'Создавайте своё лобби, настраивайте слово и время игры. Вместо 5 человек в обычном лобби, вы можете пригласить до 20 игроков!',
     },
     {
       Icon: Icon24MoreHorizontal,
