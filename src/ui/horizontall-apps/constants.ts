@@ -7,6 +7,8 @@ import {
   Icon24MoreHorizontal,
   Icon24Users3Outline,
   Icon24ViewOutline,
+  Icon24BrushOutline,
+  Icon24PenOutline,
 } from '@vkontakte/icons';
 import { AppContent, AppName } from './types';
 
@@ -50,6 +52,27 @@ export const previewContent: Partial<Record<AppName, AppContent[]>> = {
     {
       Icon: Icon24BookmarkOutline,
       title: 'Неограниченные закладки',
+    },
+    {
+      Icon: Icon24MoreHorizontal,
+      title: 'Бонусы в других приложениях',
+    },
+  ],
+  draw: [
+    {
+      Icon: Icon24BrushOutline,
+      title: 'Радужный цвет',
+      subTitle: 'Рисуйте радужным цветом и другими градиентами',
+    },
+    {
+      Icon: Icon24PenOutline,
+      title: 'Изменение рисунка',
+      subTitle: 'Вы сможете дорисовать свои картины в любое время',
+    },
+    {
+      Icon: Icon24Users3Outline,
+      title: 'Своё лобби',
+      subTitle: 'Создавайте своё лобби, настраивайте слово и рисункки. Приглашайте своих друзей. Вместо 5 человек в лобби, вы можете пригласить до 20 игроков!',
     },
     {
       Icon: Icon24MoreHorizontal,
