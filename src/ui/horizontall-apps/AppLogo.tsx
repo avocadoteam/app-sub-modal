@@ -13,7 +13,7 @@ export const AppLogo = ({ appName, svgPath }: Props) => {
   const { onSelect } = useContext(SelectedAppContext);
   return (
     <div className={appImg} onClick={() => onSelect(appName)}>
-      <Avatar size={80} mode="app" src={svgPath} alt={appName} />
+      <Avatar size={80} src={svgPath} alt={appName} />
     </div>
   );
 };
