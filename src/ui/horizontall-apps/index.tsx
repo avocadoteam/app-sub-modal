@@ -1,4 +1,4 @@
-import { Button, FixedLayout, SizeType, Spacing, Text } from '@vkontakte/vkui';
+import { Button, FixedLayout, Spacing, Text } from '@vkontakte/vkui';
 import { useMemo, useState } from 'react';
 import Marquee from 'react-fast-marquee';
 import { SparklesIcon } from '../icons/Sparkles';
@@ -7,11 +7,11 @@ import { AppLogo } from './AppLogo';
 import city from './apps-svg/city.svg';
 import deliver from './apps-svg/deliver.svg';
 import dict from './apps-svg/dict.svg';
+import draw from './apps-svg/draw.svg';
 import friends from './apps-svg/friends.svg';
 import hinter from './apps-svg/hinter.svg';
 import medic from './apps-svg/medic.svg';
 import stuff from './apps-svg/stuff.svg';
-import draw from './apps-svg/draw.svg';
 import { previewContent } from './constants';
 import { SelectedAppContext } from './context';
 import { DescItem } from './DescItem';
@@ -71,7 +71,6 @@ export const HorizontalApps = () => {
         <div className={bFixed}>
           <Button
             size="l"
-            sizeY={SizeType.REGULAR}
             stretched
             before={<SparklesIcon />}
             className={button}

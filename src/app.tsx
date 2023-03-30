@@ -7,9 +7,7 @@ import { useQParams } from './ui/useQParams';
 export const App = () => {
   const { appearance } = useQParams();
   return (
-    // @ts-ignore
     <ConfigProvider appearance={appearance}>
-      {/* @ts-ignore */}
       <AdaptivityProvider>
         <AppRoot className={themeClass}>
           <HorizontalApps />
