@@ -4,6 +4,7 @@ import Marquee from 'react-fast-marquee';
 import { SparklesIcon } from '../icons/Sparkles';
 import { useQParams } from '../useQParams';
 import { AppLogo } from './AppLogo';
+import { DescItem } from './DescItem';
 import city from './apps-svg/city.svg';
 import deliver from './apps-svg/deliver.svg';
 import dict from './apps-svg/dict.svg';
@@ -14,8 +15,7 @@ import medic from './apps-svg/medic.svg';
 import stuff from './apps-svg/stuff.svg';
 import { previewContent } from './constants';
 import { SelectedAppContext } from './context';
-import { DescItem } from './DescItem';
-import { betweenFixed, bFixed, bTitle, button, hContainer, mSubTitle, mTitle } from './styles.css';
+import { bFixed, bTitle, betweenFixed, button, hContainer, mSubTitle, mTitle } from './styles.css';
 import { AppName } from './types';
 
 export const openLink = (link: string) => {
@@ -74,7 +74,7 @@ export const HorizontalApps = () => {
             stretched
             before={<SparklesIcon />}
             className={button}
-            onClick={() => openLink('https://vk.com/avocadoteam?source=description&w=donut_payment-197416979')}
+            onClick={() => openLink('https://vk.com/avocado?source=description&w=donut_payment-197416979')}
           >
             Попробовать
           </Button>
